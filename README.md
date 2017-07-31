@@ -7,28 +7,19 @@
 - Example
 
 ```
-$(function () {
+ 
 			$("#ganttChart").ganttView({ 
 				data: ganttData, //数据源
-				slideWidth: 600,
+				slideWidth: 600, //定义大小，默认400
 				behavior: {
-					onClick: function (data) { 
-						var msg = "You clicked on an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
-						$("#eventMessage").text(msg);
-					},
-					onResize: function (data) { 
-						var msg = "You resized an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
-						$("#eventMessage").text(msg);
-					},
-					onDrag: function (data) { 
-						var msg = "You dragged an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
-						$("#eventMessage").text(msg);
-					}
+					onClick: function (data) { //绑定点击事件
+						console.log(data);
+						 					}
 				}
 			});
 			
 			// $("#ganttChart").ganttView("setSlideWidth", 600);
-		});
+	 
 ```
  
 ![Alt text](example/image.png "gantt")
