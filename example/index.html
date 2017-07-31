@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+ 
+	<!-- <link rel="stylesheet" type="text/css" href="reset.css" /> -->
+	<link rel="stylesheet" type="text/css" href="../zing.gantt.css" />
+	<style type="text/css">
+		body {
+			font-family: tahoma, verdana, helvetica;
+			font-size: 0.8em;
+			padding: 10px;
+		}
+	</style>
+	<title>zing.gantt.js</title>
+</head>
+<body>
+
+	<div id="ganttChart"></div>
+	<br/><br/>
+	<div id="eventMessage"></div>
+
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+	<script type="text/javascript" src="../lib/date.js"></script>
+	 
+	<script type="text/javascript" src="../zing.gantt.js"></script>
+ 
+	<script type="text/javascript">
+
+
+		$(function () {
+			$("#ganttChart").ganttView({ 
+				data: ganttData,
+				slideWidth: 600,
+				behavior: {
+					onClick: function (data) { 
+						var msg = "You clicked on an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+						$("#eventMessage").text(msg);
+					},
+					onResize: function (data) { 
+						var msg = "You resized an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+						$("#eventMessage").text(msg);
+					},
+					onDrag: function (data) { 
+						var msg = "You dragged an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+						$("#eventMessage").text(msg);
+					}
+				}
+			});
+			
+			// $("#ganttChart").ganttView("setSlideWidth", 600);
+		});
+
+	//数据源
+	var ganttData = [
+	{
+		id: 1, name: "电商需求", series: [
+			{ name: "电商需求", plan:{start: new Date(2017,06,01), end: new Date(2017,06,09)},true:{start: new Date(2017,06,01), end: new Date(2017,06,07)} },
+			{ name: "头脑风暴", plan:{start: new Date(2017,06,01), end: new Date(2017,06,02)},true:{start: new Date(2017,06,01), end: new Date(2017,06,02)} },
+			{ name: "原型设计", plan:{start: new Date(2017,06,02), end: new Date(2017,06,05)},true:{start: new Date(2017,06,02), end: new Date(2017,06,05)} },
+			{ name: "原型确认", plan:{start: new Date(2017,06,05), end: new Date(2017,06,07)},true:{start: new Date(2017,06,05), end: new Date(2017,06,07)} },
+			{ name: "提交研发", plan:{start: new Date(2017,06,07), end: new Date(2017,06,09)},true:{start: new Date(2017,06,07), end: new Date(2017,06,09)} }
+		]
+	}, 
+	{
+		id: 2, name: "电商需求", series: [
+			{ name: "电商开发", plan:{start: new Date(2017,06,15), end: new Date(2017,06,23)},true:{start: new Date(2017,06,16), end: new Date(2017,07,01)}  },
+			{ name: "需求评估", plan:{start: new Date(2017,06,15), end: new Date(2017,06,17)},true:{start: new Date(2017,06,16), end: new Date(2017,06,17)}  },
+			{ name: "程序开发", plan:{start: new Date(2017,06,17), end: new Date(2017,06,21)},true:{start: new Date(2017,06,17), end: new Date(2017,06,25)}  },
+			{ name: "程序测试", plan:{start: new Date(2017,06,21), end: new Date(2017,06,22)},true:{start: new Date(2017,06,25), end: new Date(2017,06,30)}  },
+			{ name: "程序提交", plan:{start: new Date(2017,06,22), end: new Date(2017,06,23)},true:{start: new Date(2017,06,30), end: new Date(2017,07,01)}  }
+		]
+	}, 
+	{
+		id: 3, name: "电商上线", series: [
+			{ name: "电商上线", plan:{start: new Date(2017,07,01), end: new Date(2017,07,15)},true:{start: new Date(2017,07,01), end: new Date(2017,07,07)} },
+			{ name: "内部测试", plan:{start: new Date(2017,07,01), end: new Date(2017,07,04)},true:{start: new Date(2017,07,01), end: new Date(2017,07,02)} },
+			{ name: "范围测试", plan:{start: new Date(2017,07,04), end: new Date(2017,07,05)},true:{start: new Date(2017,07,02), end: new Date(2017,07,05)} },
+			{ name: "上线发布", plan:{start: new Date(2017,07,05), end: new Date(2017,07,06)},true:{start: new Date(2017,07,05), end: new Date(2017,07,06)} },
+			{ name: "提交研发", plan:{start: new Date(2017,07,06), end: new Date(2017,07,15)},true:{start: new Date(2017,07,06), end: new Date(2017,07,07)} }
+		]
+	}
+];
+	</script>
+
+</body>
+</html>
