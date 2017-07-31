@@ -6,19 +6,20 @@
 
 - Example
 
+
+
 ```
  
-			$("#ganttChart").ganttView({ 
-				data: ganttData, //数据源
-				slideWidth: 600, //定义大小，默认400
-				behavior: {
-					onClick: function (data) { //绑定点击事件
-						console.log(data);
-						 					}
-				}
-			});
+$("#ganttChart").ganttView({ 
+  data: ganttData, //数据源
+  slideWidth: 600, //定义大小，默认400
+  behavior: {
+    onClick: function (data) { //绑定点击事件
+    console.log(data);
+  }
+});
 			
-			// $("#ganttChart").ganttView("setSlideWidth", 600);
+			 
 	 
 ```
  
