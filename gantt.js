@@ -3,7 +3,7 @@
   todo:为第二条甘特图增加click事件回调
 
   [甘特图] 扩展插件 扩展自jQuery 使用jQuery
-  by VenDar-GM
+  by pkwenda
   2017/06/31
 */
 
