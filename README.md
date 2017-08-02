@@ -3,13 +3,14 @@
 
 - 两条线的甘特图[预期值]+[实际值] 插件
 打破传统甘特图一条线的模式，采用`计划`和`实际`两条线，更加直观，并去掉一些拖动组件。
+- 不靠svg这种比较笨重的组件，完全hml元素生成
+- 源码小，轻量级
+
+- todo：汉化+响应式
 
 - Example
 
-
-
 ```
- 
 $("#ganttChart").ganttView({ 
   data: ganttData, //数据源
   slideWidth: 600, //定义大小，默认400
@@ -17,10 +18,7 @@ $("#ganttChart").ganttView({
     onClick: function (data) { //绑定点击事件
     console.log(data);
   }
-});
-			
-			 
-	 
+});			 	 
 ```
  
 ![Alt text](example/image.png "gantt")
