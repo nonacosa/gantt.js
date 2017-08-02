@@ -1,8 +1,5 @@
 <p align="center">
-  <a href="https://github.com/pkwenda/gantt.js/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-4EB1BA.svg?style=flat-square" alt="Build Status"></a>
-   
-  
-  <a href="#"><img src="https://img.shields.io/badge/version-0.0.1-red.svg?style=flat-square" alt="Sauce Test Status"></a>
+  <a href="https://github.com/pkwenda/gantt.js/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-4EB1BA.svg?style=flat-square" alt="Build Status"></a><a href="#"><img src="https://img.shields.io/badge/version-0.0.1-red.svg?style=flat-square" alt="Sauce Test Status"></a>
 </p>
 
 ## gantt.js
