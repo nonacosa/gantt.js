@@ -52,6 +52,7 @@ div.ganttview-vtheader {
 	width: 240px;
 	overflow: hidden;
 	background-color: #fff;
+	border-bottom: 1px solid #999;
 }
 
 div.ganttview-vtheader-item {
@@ -70,7 +71,7 @@ div.ganttview-vtheader-series-name {
 	width: 130px;
 	height: 31px;
 	border-top: 1px solid #d0d0d0;
-	line-height: 16px;
+	line-height: 30px;
 	padding-left: 5px;
 }
 
@@ -133,7 +134,9 @@ div.ganttview-block-text {
 	height: 12px;
 	font-size: 0.8em;
 	color: #999;
-	padding: 2px 3px;
+	/*padding: 2px 3px;*/
+	padding: 0px 2px 1px 4px;
+	bottom: 4px;
 }
 
 
